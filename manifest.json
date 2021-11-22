@@ -4,6 +4,11 @@
     "manifest_version": 3,
     "version": "0.1",
     "description": "Removes the comment section on 20min.ch.",
+    "icons": {
+        "16": "troll_16.png",
+        "48": "troll_48.png",
+        "128": "troll_128.png"
+    },
     "permissions": [
       "tabs",
       "activeTab",

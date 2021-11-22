@@ -1,5 +1,9 @@
 
 
 var element = document.querySelector('#commentSection');
-element.parentElement.removeChild(element);
+if (element != null){
+    element.parentElement.removeChild(element);
+    console.log("Removed Comments...")
+}
+
 
