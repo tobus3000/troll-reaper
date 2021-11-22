@@ -1,0 +1,26 @@
+{
+    "name": "Troll Reaper",
+    "action": {},
+    "manifest_version": 3,
+    "version": "0.1",
+    "description": "Removes the comment section on 20min.ch.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+        "*://*.20min.ch/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.20min.ch/*"],
+            "run_at": "document_idle",
+            "all_frames": true,
+            "js": ["remove_comment.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+  }
