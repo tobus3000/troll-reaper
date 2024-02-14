@@ -2,8 +2,8 @@
     "name": "Troll Reaper",
     "action": {},
     "manifest_version": 3,
-    "version": "0.1",
-    "description": "Removes the comment section on 20min.ch.",
+    "version": "0.2",
+    "description": "Removes the comment section on some websites.",
     "icons": {
         "16": "troll_16.png",
         "48": "troll_48.png",
@@ -15,11 +15,17 @@
       "scripting"
     ],
     "host_permissions": [
-        "*://*.20min.ch/*"
+        "*://*.20min.ch/*",
+        "*://*.watson.ch/*",
+        "*://*.blick.ch/*"
     ],
     "content_scripts": [
         {
-            "matches": ["https://*.20min.ch/*"],
+            "matches": [
+                "https://*.20min.ch/*",
+                "https://*.watson.ch/*",
+                "https://*.blick.ch/*"
+            ],
             "run_at": "document_idle",
             "all_frames": true,
             "js": ["remove_comment.js"]
